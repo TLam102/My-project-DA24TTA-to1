@@ -1,1 +1,45 @@
-﻿
+﻿avt.td,th{
+	border: 2px solid pink;
+}
+
+caption{
+	 text-transform: uppercase;
+     margin-bottom: 10px;
+	 font-weight: bold;
+}
+.TT{
+	border-collapse: collapse;
+	border: 2px solid pink;
+	margin: 20px auto;
+	font-size:20px;
+	width: 80%;
+}
+.avt{
+	margin: 10px auto;
+	font-size:20px;
+	width: 90%;
+}
+TT.tr,td{
+	border: 1px solid pink;
+}
+th{
+	background-color: rgba(255, 0, 0, 0.4);
+	border: 1px solid pink;
+}
+tr:hover{
+	background-color:hsla(0, 100%, 70%, 0.3);
+}
+button{
+	padding: 20px;
+	border-radius: 30%;
+	background: rgba(255, 0, 0, 0.8);
+	text-color: weight;
+}
+ul{
+	text-align:center;
+}
+
+
+h1,h2,h3{
+	text-align:center;
+}

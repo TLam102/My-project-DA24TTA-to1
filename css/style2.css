@@ -1,0 +1,40 @@
+﻿*{
+	margin:0;
+	padding: 0;
+	color: rgb(221, 48, 77);
+}
+body{
+	background-color:rgb(181, 224, 175);
+}
+div.container{
+	background-color:pink;
+	margin: 50px;
+	padding: 30px;
+}
+h3#title{
+	text-transform: uppercase;
+	text-align: center;
+}
+div.form-group{
+	margin: 10px 0 ;
+}
+div.form-group label{
+	display: inline-block;
+	border-radius: 20px;
+	width: 120px;
+	transition: 0.5s;
+}
+form#frmLogin{
+	background-color: antiquewhite;
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px;
+	border-radius: 10px;
+}
+input.button{
+	border-radius: 20px;
+	padding: 6px;
+	border: none;
+	background-color: gold;
+	margin: 0 10px;
+}	

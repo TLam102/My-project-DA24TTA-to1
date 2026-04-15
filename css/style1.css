@@ -31,15 +31,19 @@ tr:hover{
 }
 button{
 	padding: 20px;
-	border-radius: 30%;
-	background: rgba(255, 0, 0, 0.8);
+	border-radius: 20px;
+	background:navajowhite;
 	text-color: weight;
+	border: none;
 }
 ul{
 	text-align:center;
 }
-
-
 h1,h2,h3{
 	text-align:center;
+}
+button#Login{
+	background-color: rgb(221, 29, 29);
+	border-radius: 50px;
+	width: 20%	;
 }

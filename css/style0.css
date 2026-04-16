@@ -5,9 +5,8 @@
 }
 html{
 	scroll-behavior: smooth;
-	
-}
 
+}
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #d6d2cf, #c1b7b0, #a89f99, #8c8680);

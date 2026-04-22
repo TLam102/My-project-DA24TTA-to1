@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang ="vi">
+	<head>
+		<title>THIẾT KẾ WEB</title>
+		<meta charset= "utf-8">
+		<link rel="stylesheet" href="../css/style6.css">
+	</head>
+	<body>
+
+		<div class="container">
+			<button onclick="add()">Thêm </button>
+
+		</div>
+		<script>
+			function add(){
+					const myRow=document.createElement("div");
+					myRow.setAttribute("class","row");
+					const myText=document.createTextNode("hehe");
+					const myLabel=document.createElement("label");
+					myLabel.textContent="Nhập môn";
+					myLabel.setAttribute("for","txtName");
+					const myInput =document.createElement("input");
+					myInput.setAttribute("type","text");
+					myInput.setAttribute("id","txtName");
+					myRow.appendChild(myText);
+					myLabel.appendChild(myLabel);
+					myInput.appendChild(myInput);
+					document.querySelector(".container").appendChild(myText);
+					document.querySelector(".container").appendChild(myLabel);
+					document.querySelector(".container").appendChild(myInput);
+			}
+			
+		</script>
+	</body>
+	
+
+</html>

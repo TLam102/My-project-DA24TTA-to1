@@ -1,0 +1,19 @@
+﻿*{
+ margin-top: 20px;
+}
+#Thanhtoan,th,td{
+    border-collapse: collapse;
+    border:2px solid rgb(9, 136, 240);
+}
+#Thanhtoan{
+    border-collapse: collapse;
+	border: 2px solid pink;
+	margin: 20px auto;
+	font-size:20px;
+	width: 80%;
+    text-align: center;
+}
+caption{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}

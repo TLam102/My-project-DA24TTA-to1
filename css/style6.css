@@ -1,0 +1,61 @@
+﻿
+    body { font-family: sans-serif; padding: 24px; background: #f5f5f5; }
+
+    .container { max-width: 700px; margin: 0 auto; }
+
+    button.btn-add {
+      padding: 8px 20px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    button.btn-add:hover { background: #1d4ed8; }
+
+    #ds-mon { display: flex; flex-direction: column; gap: 12px; }
+
+    .row {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 16px 20px;
+    }
+
+    .row form {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.2fr auto;
+      gap: 12px;
+      align-items: end;
+    }
+
+    .row form .field { display: flex; flex-direction: column; gap: 4px; }
+
+    .row form label { font-size: 12px; color: #666; }
+
+    .row form input,
+    .row form select {
+      padding: 7px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+    }
+    .row form input:focus,
+    .row form select:focus { border-color: #2563eb; }
+
+    .row form input[type="number"] { width: 100%; }
+
+    button.btn-xoa {
+      padding: 7px 14px;
+      background: #fee2e2;
+      color: #b91c1c;
+      border: 1px solid #fca5a5;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    button.btn-xoa:hover { background: #fecaca; }

@@ -1,37 +1,96 @@
 ﻿<!DOCTYPE html>
-<html lang ="vi">
-	<head>
-		<title>THIẾT KẾ WEB</title>
-		<meta charset= "utf-8">
-		<link rel="stylesheet" href="../css/style6.css">
-	</head>
-	<body>
+<html lang="vi">
+<head>
+  <title>THIẾT KẾ WEB</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/style6.css">
+</head>
+<body>
 
-		<div class="container">
-			<button onclick="add()">Thêm </button>
+<div class="container">
+  <button class="btn-add" onclick="themMon()">+ Thêm môn</button>
+  <div id="ds-mon"></div>
+</div>
 
-		</div>
-		<script>
-			function add(){
-					const myRow=document.createElement("div");
-					myRow.setAttribute("class","row");
-					const myText=document.createTextNode("hehe");
-					const myLabel=document.createElement("label");
-					myLabel.textContent="Nhập môn";
-					myLabel.setAttribute("for","txtName");
-					const myInput =document.createElement("input");
-					myInput.setAttribute("type","text");
-					myInput.setAttribute("id","txtName");
-					myRow.appendChild(myText);
-					myLabel.appendChild(myLabel);
-					myInput.appendChild(myInput);
-					document.querySelector(".container").appendChild(myText);
-					document.querySelector(".container").appendChild(myLabel);
-					document.querySelector(".container").appendChild(myInput);
-			}
-			
-		</script>
-	</body>
-	
+<script>
+  let dem = 0;
 
+  function themMon() {
+    dem++;
+    const id = "mon-" + dem;
+
+    const row = document.createElement("div");
+    row.setAttribute("class", "row");
+    row.setAttribute("id", id);
+
+    const form = document.createElement("form");
+    form.onsubmit = function(e) { e.preventDefault(); };
+
+    // Ô tên môn
+    const fieldTen = document.createElement("div");
+    fieldTen.setAttribute("class", "field");
+    const labelTen = document.createElement("label");
+    labelTen.textContent = "Tên môn học";
+    labelTen.setAttribute("for", "ten-" + dem);
+    const inputTen = document.createElement("input");
+    inputTen.setAttribute("type", "text");
+    inputTen.setAttribute("id", "ten-" + dem);
+    inputTen.setAttribute("placeholder", "Nhập tên môn...");
+    fieldTen.appendChild(labelTen);
+    fieldTen.appendChild(inputTen);
+
+    // Ô số tín chỉ
+    const fieldTin = document.createElement("div");
+    fieldTin.setAttribute("class", "field");
+    const labelTin = document.createElement("label");
+    labelTin.textContent = "Số tín chỉ";
+    labelTin.setAttribute("for", "tin-" + dem);
+    const inputTin = document.createElement("input");
+    inputTin.setAttribute("type", "number");
+    inputTin.setAttribute("id", "tin-" + dem);
+    inputTin.setAttribute("min", "1");
+    inputTin.setAttribute("max", "10");
+    inputTin.setAttribute("placeholder", "VD: 3");
+    fieldTin.appendChild(labelTin);
+    fieldTin.appendChild(inputTin);
+
+    // Ô chọn loại
+    const fieldLoai = document.createElement("div");
+    fieldLoai.setAttribute("class", "field");
+    const labelLoai = document.createElement("label");
+    labelLoai.textContent = "Loại môn";
+    labelLoai.setAttribute("for", "loai-" + dem);
+    const select = document.createElement("select");
+    select.setAttribute("id", "loai-" + dem);
+    const opt1 = document.createElement("option");
+    opt1.value = "co-so";
+    opt1.textContent = "Cơ sở";
+    const opt2 = document.createElement("option");
+    opt2.value = "chuyen-nganh";
+    opt2.textContent = "Chuyên ngành";
+    select.appendChild(opt1);
+    select.appendChild(opt2);
+    fieldLoai.appendChild(labelLoai);
+    fieldLoai.appendChild(select);
+
+    // Nút xóa
+    const btnXoa = document.createElement("button");
+    btnXoa.setAttribute("class", "btn-xoa");
+    btnXoa.setAttribute("type", "button");
+    btnXoa.textContent = "Xóa";
+    btnXoa.onclick = function() {
+      document.getElementById(id).remove();
+    };
+
+    form.appendChild(fieldTen);
+    form.appendChild(fieldTin);
+    form.appendChild(fieldLoai);
+    form.appendChild(btnXoa);
+    row.appendChild(form);
+
+    document.getElementById("ds-mon").appendChild(row);
+  }
+</script>
+
+</body>
 </html>

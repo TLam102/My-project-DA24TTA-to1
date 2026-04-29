@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>THIẾT KẾ WEB</title>
+  <link rel="stylesheet" href="../css/style7.css">
+  <script src="../js/lib.js" defer></script>
+</head>
+<body>
+
+<div class="modal-overlay" id="modal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <h2>Thêm sản phẩm mới</h2>
+
+    <label>Tên sản phẩm <span style="color:red">*</span></label>
+    <input type="text" id="inp-ten" placeholder="Nhập tên sản phẩm..." />
+
+    <label>Giá <span style="color:red">*</span></label>
+    <input type="text" id="inp-gia" placeholder="Vd: 250,000" />
+
+    <label>URL link chi tiết</label>
+    <input type="text" id="inp-link" placeholder="https://... (không bắt buộc)" />
+
+    <div class="modal-actions">
+      <button class="btn-cancel"  onclick="closeModal()">Huỷ</button>
+      <button class="btn-confirm" onclick="handleAdd()">Thêm</button>
+    </div>
+  </div>
+</div>
+<h2>Danh sách sản phẩm</h2>
+<table>
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tên sản phẩm</th>
+      <th>Giá</th>
+      <th>Chi tiết</th>
+    </tr>
+  </thead>
+  <tbody id="product-list"></tbody>
+</table>
+
+<!-- THÊM: Nút thêm sản phẩm ở cuối trang -->
+<div style="text-align:center; margin-top: 24px;">
+  <button class="btn-confirm" onclick="openModal()">+ Thêm sản phẩm</button>
+</div>
+<script src="product.js"></script>
+<script>
+  function handleOverlayClick(e) {
+    if (e.target.id === "modal") closeModal();
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Enter" && document.getElementById("modal").classList.contains("show")) {
+      handleAdd();
+    }
+    if (e.key === "Escape") closeModal();
+  });
+</script>
+
+</body>
+</html>
